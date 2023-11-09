@@ -1,139 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <script>
-        var x = 1;
-        var o = 0;
-        var quad1 = 0;
-        
-        function linha1(){
-            if(quad1 == 0){
-                if(x == 1){
-                    var quadrado1 = document.getElementById('linha1');
-                    quadrado1.innerHTML = "X"
-                    x = 0;
-                    o = 1;
-                    quad1 = 1;
-                }else{
-                    var quadrado1 = document.getElementById('linha1');
-                    quadrado1.innerHTML = "O";
-                    x = 1;
-                    o = 0;
-                    quad1 = 1;
-                }
-            }else{
 
-            }
-        }
-        function linha2(){
-            if(x == 1){
-                var quadrado2 = document.getElementById('linha2');
-                quadrado2.innerHTML = "X"
-                x = 0;
-                o = 1;
-            }else{
-                var quadrado2 = document.getElementById('linha2');
-                quadrado2.innerHTML = "O";
-                x = 1;
-                o = 0;
-            }
-        }
-        function linha3(){
-            if(x == 1){
-                var quadrado3 = document.getElementById('linha3');
-                quadrado3.innerHTML = "X"
-                x = 0;
-                o = 1;
-            }else{
-                var quadrado3 = document.getElementById('linha3');
-                quadrado3.innerHTML = "O";
-                x = 1;
-                o = 0;
-            }
-        }
-        function linha4(){
-            if(x == 1){
-                var quadrado4 = document.getElementById('linha4');
-                quadrado4.innerHTML = "X"
-                x = 0;
-                o = 1;
-            }else{
-                var quadrado4 = document.getElementById('linha4');
-                quadrado4.innerHTML = "O";
-                x = 1;
-                o = 0;
-            }
-        }
-        function linha5(){
-            if(x == 1){
-                var quadrado5 = document.getElementById('linha5');
-                quadrado5.innerHTML = "X"
-                x = 0;
-                o = 1;
-            }else{
-                var quadrado5 = document.getElementById('linha5');
-                quadrado5.innerHTML = "O";
-                x = 1;
-                o = 0;
-            }
-        }
-        function linha6(){
-            if(x == 1){
-                var quadrado6 = document.getElementById('linha6');
-                quadrado6.innerHTML = "X"
-                x = 0;
-                o = 1;
-            }else{
-                var quadrado6 = document.getElementById('linha6');
-                quadrado6.innerHTML = "O";
-                x = 1;
-                o = 0;
-            }
-        }
-        function linha7(){
-            if(x == 1){
-                var quadrado7 = document.getElementById('linha7');
-                quadrado7.innerHTML = "X"
-                x = 0;
-                o = 1;
-            }else{
-                var quadrado7 = document.getElementById('linha7');
-                quadrado7.innerHTML = "O";
-                x = 1;
-                o = 0;
-            }
-        }
-        function linha8(){
-            if(x == 1){
-                var quadrado8 = document.getElementById('linha8');
-                quadrado8.innerHTML = "X"
-                x = 0;
-                o = 1;
-            }else{
-                var quadrado8 = document.getElementById('linha8');
-                quadrado8.innerHTML = "O";
-                x = 1;
-                o = 0;
-            }
-        }
-        function linha9(){
-            if(x == 1){
-                var quadrado9 = document.getElementById('linha9');
-                quadrado9.innerHTML = "X"
-                x = 0;
-                o = 1;
-            }else{
-                var quadrado9 = document.getElementById('linha9');
-                quadrado9.innerHTML = "O";
-                x = 1;
-                o = 0;
-            }
-        }
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Velha</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js.js"></script>
 </head>
 <body>
     <div class="container_principal">
@@ -141,22 +14,22 @@
             Jogo Da Velha
         </div>
         <div class="jogo">
-            <div class="linha1" id="linha1" onclick="linha1()"></div>
-            <div class="linha2" id="linha2" onclick="linha2()"></div>
-            <div class="linha3" id="linha3" onclick="linha3()"></div>
-            <div class="linha4" id="linha4" onclick="linha4()"></div>
-            <div class="linha5" id="linha5" onclick="linha5()"></div>
-            <div class="linha6" id="linha6" onclick="linha6()"></div>
-            <div class="linha7" id="linha7" onclick="linha7()"></div>
-            <div class="linha8" id="linha8" onclick="linha8()"></div>
-            <div class="linha9" id="linha9" onclick="linha9()"></div>
+            <div class="linha1" id="linha1" onclick="linha('linha1')">1</div>
+            <div class="linha2" id="linha2" onclick="linha('linha2')">2</div>
+            <div class="linha3" id="linha3" onclick="linha('linha3')">3</div>
+            <div class="linha4" id="linha4" onclick="linha('linha4')">4</div>
+            <div class="linha5" id="linha5" onclick="linha('linha5')">5</div>
+            <div class="linha6" id="linha6" onclick="linha('linha6')">6</div>
+            <div class="linha7" id="linha7" onclick="linha('linha7')">7</div>
+            <div class="linha8" id="linha8" onclick="linha('linha8')">8</div>
+            <div class="linha9" id="linha9" onclick="linha('linha9')">9</div>
         </div>
         <div class="botao">
-            <button>Jogar</button>
+            <button id="botao" onclick="jogar()">Jogar</button>
         </div>
         <div class="player1">
             <div>
-                Você
+                Jogador 1
             </div>
             <div class="player1">
                 X
@@ -164,7 +37,7 @@
         </div>
         <div class="player2">
             <div>
-                Computador
+                Jogador 2
             </div>
             <div class="player2">
                 O
